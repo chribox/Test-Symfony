@@ -1,0 +1,25 @@
+navbar:
+  title: Spiriit Test
+  home: Home
+  cart: Cart
+  lang: 
+    french: French
+    english: English
+product:
+  detail: See the sheet
+  price: Price
+  addToCart:
+    button: Add to cart
+    quantity: Quantity
+cart:
+  product:
+      title: Designation
+      price: Price
+      quantity: Quantity
+      subtotal: Subtotal
+      delete: Delete
+  totalAmount: Total Amount
+  button:
+    clear: Clear cart
+  message:
+    empty: Cart is empty

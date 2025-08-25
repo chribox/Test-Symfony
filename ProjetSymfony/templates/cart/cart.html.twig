@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Panier{% endblock %}
+
+{% block body %}
+    {% if products is not defined or products is empty %}
+        <p class="fs-5">{{ 'cart.message.empty'|trans }}</p>
+    {% else %}
+        {# Affichage du panier #}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>{{ 'cart.product.title'|trans }}</th>
+                    <th class="text-center">{{ 'cart.product.price'|trans }}</th>
+                    <th class="text-center">{{ 'cart.product.quantity'|trans }}</th>
+                    <th class="text-center">{{ 'cart.product.subtotal'|trans }}<th/>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td>
+                        {{product.nom}}
+                    </td>
+                    <td class="text-center">
+                        {{product.prix}}
+                    </td>
+                    <td class="text-center">
+
+                        <form action="{{ path('cart.updateQuantity', {id: product.id}) }}" method="POST" style="display:inline;">
+                            <input type="hidden" name="quantity" value="{{ product.quantity - 1 }}">
+                            <button class="btn btn-secondary btn-sm" type="submit" {% if product.quantity <= 1 %}disabled{% endif %}>-</button>
+                        </form>  
+                        {{product.quantity}}
+                        <form action="{{ path('cart.updateQuantity', {id: product.id}) }}" method="POST" style="display:inline;">
+                            <input type="hidden" name="quantity" value="{{ product.quantity + 1 }}">
+                            <button class="btn btn-secondary btn-sm" type="submit" {% if product.quantity >= 10 %}disabled{% endif %}>+</button>
+                        </form>  
+                    </td>
+                    <td class="text-center">
+                        {{product.subtotal}}
+                    </td>
+                    <td>
+                        <div>
+                            <form action="{{ path('cart.deleteProduct', {id: product.id}) }}" method="POST">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger btn-sm">{{ 'cart.product.delete'|trans }}</button>
+                            </form>
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+                {% endfor %}
+                <tr>
+                        <td  class="text-end fw-bold fs-5" colspan="5">{{ 'cart.totalAmount'|trans }}</td>
+                        <td class="text-center fw-bold fs-5">{{total}} €</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <a href="{{ path('cart.clear') }}" class="btn btn-primary">
+                {{ 'cart.button.clear'|trans }}
+            </a>
+        </p>
+    {% endif %}
+{% endblock %}

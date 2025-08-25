@@ -1,0 +1,14 @@
+[
+  {"id":1,"nom":"Café Étoilé","description":"Mélange aromatique d'Arabica","prix":12.50},
+  {"id":2,"nom":"Choco Lune","description":"Tablette de chocolat noir intense","prix":23.00},
+  {"id":3,"nom":"Thé des Montagnes","description":"Infusion aux plantes sauvages","prix":34.75},
+  {"id":4,"nom":"Granola Croquant","description":"Céréales bio et fruits secs","prix":15.00},
+  {"id":5,"nom":"Miel Doré","description":"Miel de fleurs sauvages","prix":19.99},
+  {"id":6,"nom":"Savon de Lune","description":"Savon artisanal parfum lavande","prix":27.50},
+  {"id":7,"nom":"Sac Nomade","description":"Sac à dos pratique et léger","prix":42.00},
+  {"id":8,"nom":"Carnet Aventure","description":"Carnet de notes en papier recyclé","prix":9.50},
+  {"id":9,"nom":"Plante Émeraude","description":"Plante verte d'intérieur facile à entretenir","prix":22.00},
+  {"id":10,"nom":"Coussin Nuage","description":"Coussin doux et moelleux","prix":31.75},
+  {"id":11,"nom":"Théière Sérénité","description":"Théière en céramique élégante","prix":17.80},
+  {"id":12,"nom":"Bracelet Lunaire","description":"Bracelet en argent et pierres naturelles","prix":14.99}
+]

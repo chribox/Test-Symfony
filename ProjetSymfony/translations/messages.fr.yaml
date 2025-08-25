@@ -1,0 +1,25 @@
+navbar:
+  title: Test Spiriit
+  home: Accueil
+  cart: Panier
+  lang: 
+    french: Français
+    english: Anglais
+product:
+  detail: Voir la fiche
+  price: Prix
+  addToCart:
+    button: Ajouter au panier
+    quantity: Quantité
+cart:
+  product:
+      title: Designation
+      price: Prix
+      quantity: Quantité
+      subtotal: Sous total
+      delete: Supprimer
+  totalAmount: Total Panier
+  button:
+    clear: Vider le panier
+  message:
+    empty: Le panier est vide  

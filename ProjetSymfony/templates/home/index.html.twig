@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+<div class="container my-10">
+    {% for product in products %}
+        <div class="product">
+            <hr>
+            <h4>{{product.nom}}</h4>
+            {% if product.image %}
+                <p><img class="productImage" src="{{ asset('uploads/images/' ~ product.image) }}" alt="{{ product.nom }}"></p>
+            {% endif %}
+            <p>
+                <a class="btn btn-secondary" 
+                href="{{ path('product.show', {id: product.id, slug: product.slug})}}">{{ 'product.detail'|trans }}
+                </a>
+            </p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

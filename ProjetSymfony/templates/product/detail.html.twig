@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produit{% endblock %}
+
+{% block body %}
+    <div class=container>
+        <p>
+            <h2>{{product.nom}}</h2>
+        </p>
+        {% if product.image %}
+            <img class="productImageBig" src="{{ asset('uploads/images/' ~ product.image) }}" alt="{{ product.nom }}">
+        {% endif %}
+        <p>{{product.description | striptags }}</p>
+        <p>{{ 'product.price'|trans }} : <strong>{{product.prix}} €</strong></p>
+        <form action="{{ path('product.addToCart', {'id': product.id}) }}" method="POST">
+            <label for="quantity">{{ 'product.addToCart.quantity'|trans }} :</label>
+            <select name="quantity" id="quantity">
+                {% for i in 1..10 %}
+                    <option value="{{ i }}">{{ i }}</option>
+                {% endfor %}
+            </select>
+            <button class="btn btn-primary" type="submit">{{ 'product.addToCart.button'|trans }}</button>
+        </form>
+        
+    </div>
+   
+{% endblock %}

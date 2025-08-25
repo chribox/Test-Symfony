@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(246, 240, 248);
+}
+
+.productImage {
+    width: 100px;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.productImageBig {
+    max-width: 300px;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
