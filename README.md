@@ -13,11 +13,11 @@ Toujours à la racine du projet (**Test-Symfony**) taper la commande :
 ```
 make php
 ```
-pour aller dans le container php et taper la commande :
+pour aller dans le container php, taper la commande :
 ```
 php bin/console doctrine:migration:migrate
 ```
-la base se nomme `spiriit.db` et est dans le dossier `var`
+La base se nomme `spiriit.db`, elle est dans le dossier `var`
 
 ### Importer les produits en base à l'aide des fixtures
 Toujours dans le container php taper la commande :
@@ -32,7 +32,7 @@ cd /ProjetSymfony
 npm run dev
 ```
 
-## Lancer les tests unitaire
+## Lancer les tests unitaires
 Dans le container php taper la commande :
 ```
 php bin/phpunit
@@ -52,8 +52,8 @@ http://localhost:8080/admin
 ```
 
 [!WARNING]
-vous pouvez avoir cette erreur
-`An exception has been thrown during the compilation of a template ("EmptyNode cannot have children.") in "@EasyAdmin/crud/index.html.twig".`
+vous pouvez avoir cette erreur   
+`An exception has been thrown during the compilation of a template ("EmptyNode cannot have children.") in "@EasyAdmin/crud/index.html.twig".`   
 C'est lié à un problème de version TWIG trop récente (la version 3.15 fonctionne).
 
 ## Faire un export CSV des produits
