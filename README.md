@@ -51,10 +51,10 @@ Accès via l'url
 http://localhost:8080/admin
 ```
 
-[!WARNING]
-vous pouvez avoir cette erreur   
-`An exception has been thrown during the compilation of a template ("EmptyNode cannot have children.") in "@EasyAdmin/crud/index.html.twig".`   
-C'est lié à un problème de version TWIG trop récente (la version 3.15 fonctionne).
+>[!WARNING]
+>vous pouvez avoir cette erreur   
+>`An exception has been thrown during the compilation of a template ("EmptyNode cannot have children.") in "@EasyAdmin/crud/index.html.twig".`   
+> C'est lié à un problème de version TWIG trop récente (la version 3.15 fonctionne).
 
 ## Faire un export CSV des produits
 Dans le container php (make php) taper
