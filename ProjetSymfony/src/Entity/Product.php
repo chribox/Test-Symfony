@@ -20,6 +20,7 @@ class Product
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\Length(min: 2)]
     private ?string $nom = null;
 
     #[ORM\Column(length: 255)]
@@ -27,9 +28,11 @@ class Product
     private ?string $slug = '';
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\Length(min: 5)]
     private ?string $description = null;
 
     #[ORM\Column]
+    #[Assert\Positive()]
     private ?float $prix = null;
 
     #[ORM\Column(type:"string", length:255, nullable:true)]

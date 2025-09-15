@@ -17,7 +17,7 @@ pour aller dans le container php, taper la commande :
 ```
 php bin/console doctrine:migration:migrate
 ```
-La base se nomme `spiriit.db`, elle est dans le dossier `var`
+La base se nomme `mabase.db`, elle est dans le dossier `var`
 
 ### Importer les produits en base à l'aide des fixtures
 Toujours dans le container php taper la commande :
@@ -50,6 +50,9 @@ Accès via l'url
 ```
 http://localhost:8080/admin
 ```
+
+user: `admin`   
+password: `password`     
 
 >[!WARNING]
 >vous pouvez avoir cette erreur   
