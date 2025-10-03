@@ -14,19 +14,8 @@ class ApiProductController extends AbstractController
     {
         $products = $productRepository->findAllOrderedByName();
 
-        $jsonProducts = [];
-        foreach ($products as $product) {
-            $jsonProducts[] = [
-                'id' => $product->getId(),
-                'nom' => $product->getNom(),
-                'description' => $product->getDescription(),
-                'prix' => $product->getPrix(),
-                //'image' => $product->getImage()
-            ];
-        }
-
         return $this->json(
-            $jsonProducts, 
+            $products, 
             200, 
             [], 
             ['json_encode_options' => JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE]
