@@ -13,7 +13,7 @@ Toujours à la racine du projet (**Test-Symfony**) taper la commande :
 ```
 make php
 ```
-pour aller dans le container php, taper la commande :
+pour aller dans le container php, puis taper la commande :
 ```
 php bin/console doctrine:migration:migrate
 ```
